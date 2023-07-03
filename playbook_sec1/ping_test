@@ -1,0 +1,12 @@
+[ping_test]
+
+yakupwinser.germanywestcentral.cloudapp.azure.com
+
+[ping_test:vars]
+
+ansible_user=yakup
+ansible_password=Bebek*57144255
+ansible_connection=winrm
+ansible_port=5985
+ansible_winrm_transport=ntlm
+ansible_winrm_server_cert_validation=ignore

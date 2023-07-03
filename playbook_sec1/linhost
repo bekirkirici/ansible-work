@@ -1,0 +1,6 @@
+[linhost]
+52.166.125.79
+[linhost:vars]
+host_key_checking=false
+ansible_ssh_user=yakup
+ansible_ssh_pass=Bebek*57144255

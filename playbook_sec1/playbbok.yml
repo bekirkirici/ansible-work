@@ -1,0 +1,14 @@
+--- 
+- name: Install Apache.
+  hosts: linhost
+  tasks:
+     - name: Install Apache.
+       command: yum install --quiet -y httpd httpd-devel
+     - name: Copy configuration files.
+       command: >
+          cp httpd.conf /etc/httpd/conf/httpd.conf
+     - command: >
+          cp httpd-vhost /etc/httpd/conf/httpd-vhost.conf
+     - name: Start apache and configure it to run at boot.
+       command: service httpd start
+     - command: chkconfig httpd on
