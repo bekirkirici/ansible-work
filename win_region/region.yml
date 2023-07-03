@@ -1,0 +1,13 @@
+---
+- name: Region-Language Settings
+  hosts: server01
+  tasks:
+     - name: Region Settings update started.
+       win_region:
+           locaiton: 244
+           format: en-US
+           unicode_language: en-US
+       register: result
+
+     - win_reboot:
+       when: result.restart_required
