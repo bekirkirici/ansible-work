@@ -1,0 +1,6 @@
+[linhost]
+127.0.0.1
+[linhost:vars]
+host_key_checking=false
+ansible_ssh_user=kirici
+ansible_ssh_pass=xxxx
