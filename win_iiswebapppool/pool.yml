@@ -1,0 +1,15 @@
+---
+- name: CPU settings
+  hosts: localhost
+  tasks:
+    - name: Test CPU
+      win_iis_webapppool:
+        name: Demo.WCFSvc
+        state: stopped
+        attributes:
+           cpu.limit: '75000'
+           cpu.action: "Throttle"
+    - name: start iis
+      win_iis_webapppool:
+        name: Demo.WCFSvc
+        state: started
